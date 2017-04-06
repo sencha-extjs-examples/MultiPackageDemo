@@ -13,7 +13,6 @@ Ext.define('App.Application', {
     ],
     
     launch: function () {
-        // TODO - Launch the application
     },
 
     onAppUpdate: function () {
