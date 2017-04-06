@@ -108,6 +108,7 @@
          *
          *     "theme": "ext-theme-classic",
          */
+        "theme": "theme-triton",
     
         /**
          * Sass configuration properties.
