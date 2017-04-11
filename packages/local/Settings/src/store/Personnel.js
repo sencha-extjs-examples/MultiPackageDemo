@@ -1,7 +1,7 @@
 Ext.define('App.store.Settings', {
     extend: 'Ext.data.Store',
 
-    alias: 'store.Settings',
+    alias: 'store.settings',
 
     fields: [
         'name', 'email', 'phone'

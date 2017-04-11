@@ -20,12 +20,20 @@ Ext.define('App.view.main.MainController', {
             //
         }
     },
+
+    gotoPage: function(type, tabContainer) {
+        if (type != 'Home') {
+            if (!Ext.Package.isLoaded(type)) {
+                Ext.Package.load(type).then(function(){
+                    var clsName = 'App.view.main.' + type + "List";
+                    tabContainer.add(Ext.create(clsName, {}));
+                });
+            }
+        }
+    },
     
     onItemActivate: function(sender, value, oldValue, eOpts) {
         var pkgName = value.title;
-        Ext.Package.load(pkgName).then(function(){
-            value.add(Ext.create('App.view.main.' + pkgName, {}));
-            debugger;
-        });
+        this.gotoPage(pkgName, value);
     }
 });
