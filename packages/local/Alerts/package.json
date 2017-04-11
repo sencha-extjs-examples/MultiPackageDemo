@@ -10,7 +10,7 @@
          *
          *    "alternateName": [],
          */
-         
+
          /**
           * The namespace of this package.
           *
@@ -18,7 +18,7 @@
           * if multiple namespaces are part of this package, set this to "".
           */
          "namespace": "Alerts",
-    
+
         /**
          * The package type.
          *
@@ -29,7 +29,7 @@
          *  - template : A package containing one or more templates.
          */
         "type": "code",
-    
+
         /**
          * The toolkit used by this theme (only for "theme" package type).
          *
@@ -38,7 +38,7 @@
          *    "toolkit": "classic",
          */
         "toolkit": "",
-    
+
          /**
           * The author of the package.
           *
@@ -46,17 +46,17 @@
           * in which case it should match the name you assign to your local package repository.
           */
         "creator": "anonymous",
-    
+
         /**
          * A summarized description of this package.
          */
         "summary": "Short summary",
-    
+
         /**
          * A detailed description of this package.
          */
         "detailedDescription": "Long description of package",
-    
+
         /**
          * The package version.
          *
@@ -64,7 +64,7 @@
          * This number should be in this format: d+(.d+)*
          */
         "version": "1.0.0",
-    
+
         /**
          * The version that users can transparently update from without requiring code changes.
          *
@@ -72,13 +72,13 @@
          * they are backward compatible using the compatVersion property.
          */
         "compatVersion": "1.0.0",
-    
+
         /**
          * Spec. version of this package.json file.
          * This is set automatically by Sencha Cmd when first generating this file
          */
         "format": "1",
-    
+
         /**
          * Additional resources used during theme slicing operations
          */
@@ -90,26 +90,26 @@
                 }
             ]
         },
-    
+
         /**
          * Controls the output directory.
          */
         "output": "${package.dir}/build",
-    
+
         /**
          * Indicates whether this is a locally developed package or downloaded form a repository.
          * Defaults to true on newly generated packages, should not be changed.
          */
         "local": true,
-    
+
         /**
          * The theme (package) this package will use (e.g., "ext-theme-neptune", etc.).
          * This is only needed if the built package will be used by a non-Cmd application.
          *
          *     "theme": "ext-theme-classic",
          */
-        "theme": "theme-triton",
-    
+        //"theme": "theme-triton",
+
         /**
          * Sass configuration properties.
          */
@@ -125,7 +125,7 @@
              * ./sass/src/Alerts/panel/Panel.scss.
              */
             "namespace": "Alerts",
-    
+
             /**
              * Comma-separated list of files or folders containing extra Sass. These
              * files are automatically included in the Sass compilation. By default this
@@ -148,7 +148,7 @@
             "etc": [
                 "${package.dir}/sass/etc/all.scss"
              ],
-    
+
             /**
              * Comma-separated list of folders containing Sass variable definitions
              * files. These file can also define Sass mixins for use by components.
@@ -172,7 +172,7 @@
             "var": [
                 "${package.dir}/sass/var"
             ],
-    
+
             /**
              * Comma-separated list of folders containing Sass rule files.
              *
@@ -193,7 +193,7 @@
                 "${package.dir}/sass/src"
             ]
         },
-    
+
         /**
          * This is the comma-separated list of folders where classes reside. These
          * classes must be explicitly required to be included in the build.
@@ -201,7 +201,7 @@
         "classpath": [
             "${package.dir}/src"
         ],
-    
+
         /**
          * Comma-separated string with the paths of directories or files to search. Any classes
          * declared in these locations will be automatically required and included in the build.
@@ -212,7 +212,7 @@
         "overrides": [
             "${package.dir}/overrides"
         ],
-    
+
         "example": {
             /**
              * One or more folders that contain example applications for this package.
@@ -220,7 +220,7 @@
             "path": [
                 "${package.dir}/examples"
             ]
-    
+
             /**
              * You can list apps specifically.
              *
@@ -232,14 +232,14 @@
              * By default, all subfolders in the path are considered example applications.
              */
         },
-    
+
         /**
          * The framework this package will use (i.e., "ext" or "touch").
          * This is only needed if the built package will be used by a non-Cmd application.
          *
          *     "framework": "ext",
          */
-    
+
         /**
          * Packages can require other packages in the same way that applications can require
          * packages.

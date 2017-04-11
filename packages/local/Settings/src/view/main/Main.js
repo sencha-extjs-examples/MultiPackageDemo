@@ -5,20 +5,20 @@
  *
  * TODO - Replace the content of this view to suit the needs of your application.
  */
-Ext.define('App.view.main.Main', {
+Ext.define('App.view.main.Settings', {
     extend: 'Ext.tab.Panel',
-    xtype: 'app-main',
+    xtype: 'app-settings',
 
     requires: [
         'Ext.MessageBox',
 
-        'App.view.main.MainController',
-        'App.view.main.MainModel',
-        'App.view.main.List'
+        'App.view.main.SettingsController',
+        'App.view.main.SettingsModel',
+        'App.view.main.SettingsList'
     ],
 
-    controller: 'main',
-    viewModel: 'main',
+    controller: 'settings',
+    viewModel: 'settings',
 
     defaults: {
         tab: {
@@ -36,24 +36,26 @@ Ext.define('App.view.main.Main', {
             layout: 'fit',
             // The following grid shares a store with the classic version's grid as well!
             items: [{
-                xtype: 'mainlist'
+                xtype: 'settingslist'
             }]
         },{
             title: 'Users',
             iconCls: 'x-fa fa-user',
-            xtype: 'container'
+            bind: {
+                html: '{loremIpsum}'
+            }
         },{
-            title: 'Dashboard',
+            title: 'Groups',
             iconCls: 'x-fa fa-users',
-            xtype: 'container'
+            bind: {
+                html: '{loremIpsum}'
+            }
         },{
             title: 'Settings',
             iconCls: 'x-fa fa-cog',
-            xtype: 'container'
+            bind: {
+                html: '{loremIpsum}'
+            }
         }
-    ],
-    
-    listeners: {
-        activeitemchange: 'onItemActivate'
-    }
+    ]
 });

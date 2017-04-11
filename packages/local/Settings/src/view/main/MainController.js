@@ -4,12 +4,10 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
-Ext.define('App.view.main.MainController', {
+Ext.define('App.view.main.SettingsController', {
     extend: 'Ext.app.ViewController',
 
-    requires: ['Ext.Package'],
-    
-    alias: 'controller.main',
+    alias: 'controller.settings',
 
     onItemSelected: function (sender, record) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
@@ -19,13 +17,5 @@ Ext.define('App.view.main.MainController', {
         if (choice === 'yes') {
             //
         }
-    },
-    
-    onItemActivate: function(sender, value, oldValue, eOpts) {
-        var pkgName = value.title;
-        Ext.Package.load(pkgName).then(function(){
-            value.add(Ext.create('App.view.main.' + pkgName, {}));
-            debugger;
-        });
     }
 });

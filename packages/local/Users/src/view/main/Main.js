@@ -5,20 +5,20 @@
  *
  * TODO - Replace the content of this view to suit the needs of your application.
  */
-Ext.define('App.view.main.Main', {
+Ext.define('App.view.main.Users', {
     extend: 'Ext.tab.Panel',
-    xtype: 'app-main',
+    xtype: 'app-users',
 
     requires: [
         'Ext.MessageBox',
 
-        'App.view.main.MainController',
-        'App.view.main.MainModel',
-        'App.view.main.List'
+        'App.view.main.UsersController',
+        'App.view.main.UsersModel',
+        'App.view.main.UsersList'
     ],
 
-    controller: 'main',
-    viewModel: 'main',
+    controller: 'users',
+    viewModel: 'users',
 
     defaults: {
         tab: {
@@ -36,24 +36,26 @@ Ext.define('App.view.main.Main', {
             layout: 'fit',
             // The following grid shares a store with the classic version's grid as well!
             items: [{
-                xtype: 'mainlist'
+                xtype: 'userslist'
             }]
         },{
             title: 'Users',
             iconCls: 'x-fa fa-user',
-            xtype: 'container'
+            bind: {
+                html: '{loremIpsum}'
+            }
         },{
-            title: 'Dashboard',
+            title: 'Groups',
             iconCls: 'x-fa fa-users',
-            xtype: 'container'
+            bind: {
+                html: '{loremIpsum}'
+            }
         },{
             title: 'Settings',
             iconCls: 'x-fa fa-cog',
-            xtype: 'container'
+            bind: {
+                html: '{loremIpsum}'
+            }
         }
-    ],
-    
-    listeners: {
-        activeitemchange: 'onItemActivate'
-    }
+    ]
 });
