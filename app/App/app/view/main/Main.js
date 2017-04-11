@@ -21,38 +21,33 @@ Ext.define('App.view.main.Main', {
     viewModel: 'main',
 
     defaults: {
+        layout: 'fit',
         tab: {
             iconAlign: 'top'
-        },
-        styleHtmlContent: true
+        }
     },
 
     tabBarPosition: 'bottom',
 
-    items: [
-        {
+    items: [{
             title: 'Home',
             iconCls: 'x-fa fa-home',
-            layout: 'fit',
             // The following grid shares a store with the classic version's grid as well!
             items: [{
                 xtype: 'mainlist'
             }]
-        },{
+        }, {
             title: 'Users',
-            iconCls: 'x-fa fa-user',
-            xtype: 'container'
-        },{
+            iconCls: 'x-fa fa-user'
+        }, {
             title: 'Dashboard',
-            iconCls: 'x-fa fa-users',
-            xtype: 'container'
-        },{
+            iconCls: 'x-fa fa-users'
+        }, {
             title: 'Settings',
-            iconCls: 'x-fa fa-cog',
-            xtype: 'container'
+            iconCls: 'x-fa fa-cog'
         }
     ],
-    
+
     listeners: {
         activeitemchange: 'onItemActivate'
     }
