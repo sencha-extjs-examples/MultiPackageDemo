@@ -4,12 +4,13 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
-Ext.define('App.view.main.MainController', {
+Ext.define('Demo.view.main.MainController', {
     extend: 'Ext.app.ViewController',
-
-    requires: ['Ext.Package'],
-
     alias: 'controller.main',
+
+    requires: [
+        'Ext.Package'  // from "package-loader"
+    ],
 
     routes: {
         'type/:type': {

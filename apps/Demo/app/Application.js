@@ -3,14 +3,10 @@
  * calls Ext.application(). This is the ideal place to handle application launch and
  * initialization details.
  */
-Ext.define('App.Application', {
+Ext.define('Demo.Application', {
     extend: 'Ext.app.Application',
     
-    name: 'App',
-
-    stores: [
-        // TODO: add global / shared stores here
-    ],
+    name: 'Demo',
     
     launch: function () {
     },

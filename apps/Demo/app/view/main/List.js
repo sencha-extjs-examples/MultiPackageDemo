@@ -1,13 +1,9 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('App.view.main.List', {
+Ext.define('Demo.view.main.List', {
     extend: 'Ext.grid.Grid',
     xtype: 'mainlist',
-
-    requires: [
-        'App.store.Personnel'
-    ],
 
     title: 'Personnel',
 

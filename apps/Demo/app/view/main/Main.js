@@ -5,20 +5,15 @@
  *
  * TODO - Replace the content of this view to suit the needs of your application.
  */
-Ext.define('App.view.main.Main', {
+Ext.define('Demo.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
-
-    requires: [
-        'Ext.MessageBox',
-
-        'App.view.main.MainController',
-        'App.view.main.MainModel',
-        'App.view.main.List'
-    ],
-
     controller: 'main',
     viewModel: 'main',
+
+    requires: [
+        'Ext.MessageBox'
+    ],
 
     defaults: {
         layout: 'fit',
@@ -27,12 +22,9 @@ Ext.define('App.view.main.Main', {
         }
     },
 
-    tabBarPosition: 'bottom',
-
     items: [{
             title: 'Home',
             iconCls: 'x-fa fa-home',
-            // The following grid shares a store with the classic version's grid as well!
             items: [{
                 xtype: 'mainlist'
             }]

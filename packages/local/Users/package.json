@@ -17,7 +17,7 @@
           * As a general rule, all classes that belong to this package should be under this namespace
           * if multiple namespaces are part of this package, set this to "".
           */
-         "namespace": "App",
+         "namespace": "Demo.users",
     
         /**
          * The package type.
@@ -29,34 +29,7 @@
          *  - template : A package containing one or more templates.
          */
         "type": "code",
-    
-        /**
-         * The toolkit used by this theme (only for "theme" package type).
-         *
-         * Themes can specify the toolkit they apply to ("classic" or "modern").
-         *
-         *    "toolkit": "classic",
-         */
-        "toolkit": "modern",
-    
-         /**
-          * The author of the package.
-          *
-          * Required only if you are distributing this package through a Sencha Cmd repository,
-          * in which case it should match the name you assign to your local package repository.
-          */
-        "creator": "anonymous",
-    
-        /**
-         * A summarized description of this package.
-         */
-        "summary": "Short summary",
-    
-        /**
-         * A detailed description of this package.
-         */
-        "detailedDescription": "Long description of package",
-    
+
         /**
          * The package version.
          *
@@ -101,15 +74,7 @@
          * Defaults to true on newly generated packages, should not be changed.
          */
         "local": true,
-    
-        /**
-         * The theme (package) this package will use (e.g., "ext-theme-neptune", etc.).
-         * This is only needed if the built package will be used by a non-Cmd application.
-         *
-         *     "theme": "ext-theme-classic",
-         */
-        "theme": "theme-triton",
-    
+
         /**
          * Sass configuration properties.
          */
@@ -124,7 +89,7 @@
              * then to style "Users.panel.Panel" you would put SASS in
              * ./sass/src/Users/panel/Panel.scss.
              */
-            "namespace": "App",
+            "namespace": "Demo.users",
     
             /**
              * Comma-separated list of files or folders containing extra Sass. These
