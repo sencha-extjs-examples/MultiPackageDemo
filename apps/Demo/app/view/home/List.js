@@ -1,14 +1,14 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('Demo.view.main.List', {
+Ext.define('Demo.view.home.List', {
     extend: 'Ext.grid.Grid',
-    xtype: 'mainlist',
+    xtype: 'homelist',
 
-    title: 'Personnel',
+    title: 'Home',
 
     store: {
-        type: 'personnel'
+        type: 'users'
     },
 
     columns: [

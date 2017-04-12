@@ -1,18 +1,14 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('App.view.main.SettingsList', {
+Ext.define('Demo.users.List', {
     extend: 'Ext.grid.Grid',
-    xtype: 'settingslist',
+    xtype: 'userslist',
 
-    requires: [
-        'App.store.Settings'
-    ],
-
-    title: 'Settings',
+    title: 'Users',
 
     store: {
-        type: 'settings'
+        type: 'users'
     },
 
     columns: [

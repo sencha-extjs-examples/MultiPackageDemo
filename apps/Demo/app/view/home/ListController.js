@@ -4,10 +4,9 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
-Ext.define('App.view.main.DashboardController', {
+Ext.define('Demo.view.home.ListController', {
     extend: 'Ext.app.ViewController',
-
-    alias: 'controller.dashboard',
+    alias: 'controller.homelist',
 
     onItemSelected: function (sender, record) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);

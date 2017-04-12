@@ -14,6 +14,22 @@
      */
     "indexHtmlPath": "index.html",
 
+    "framework": "ext",
+    "toolkit": "modern",
+    "theme": "theme-material",
+    
+    "requires": [
+        "font-awesome",
+        "Model",
+        "package-loader"
+    ],
+
+    "uses": [
+        "Dashboard",
+        "Users",
+        "Settings"
+    ],
+
     /**
      * Comma-separated string with the paths of directories or files to search. Any classes
      * declared in these locations will be available in your class "requires" or in calls
@@ -33,43 +49,6 @@
      */
     "overrides": [
         "overrides"
-    ],
-
-    /**
-     * The Sencha Framework for this application: "ext" or "touch".
-     */
-    "framework": "ext",
-    
-    /**
-     * The toolkit to use. Select either "classic" or "modern".
-     */
-    "toolkit": "modern",
-    
-    /**
-     * The name of the theme for this application.
-     */
-    
-    "theme": "theme-material",
-    
-    /**
-     * The list of required packages (with optional versions; default is "latest").
-     *
-     * For example,
-     *
-     *      "requires": [
-     *          "charts"
-     *      ]
-     */
-    "requires": [
-        "font-awesome",
-        "Model",
-        "package-loader"
-    ],
-
-    "uses": [
-        "Dashboard",
-        "Users",
-        "Settings"
     ],
     
     /**

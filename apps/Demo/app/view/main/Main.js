@@ -26,17 +26,23 @@ Ext.define('Demo.view.main.Main', {
             title: 'Home',
             iconCls: 'x-fa fa-home',
             items: [{
-                xtype: 'mainlist'
+                xtype: 'homelist'
             }]
         }, {
             title: 'Users',
-            iconCls: 'x-fa fa-user'
+            iconCls: 'x-fa fa-user',
+            package: 'Users',
+            view: 'userlist'
         }, {
             title: 'Dashboard',
-            iconCls: 'x-fa fa-users'
+            iconCls: 'x-fa fa-users',
+            package: 'Dashboard',
+            view: 'dashboardlist'
         }, {
             title: 'Settings',
-            iconCls: 'x-fa fa-cog'
+            iconCls: 'x-fa fa-cog',
+            package: 'Settings',
+            view: 'settingslist'
         }
     ],
 

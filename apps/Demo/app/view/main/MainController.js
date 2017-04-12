@@ -19,16 +19,6 @@ Ext.define('Demo.view.main.MainController', {
         }
     },
 
-    onItemSelected: function (sender, record) {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
-    },
-
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            //
-        }
-    },
-
     loadPackage: function (type, action) {
         if (type === 'Home' || Ext.Package.isLoaded(type)) {
             action.resume();

@@ -1,18 +1,14 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('App.view.main.DashboardList', {
+Ext.define('Demo.settings.List', {
     extend: 'Ext.grid.Grid',
-    xtype: 'dashboardlist',
+    xtype: 'settingslist',
 
-    requires: [
-        'App.store.Dashboard'
-    ],
-
-    title: 'Dashboard',
+    title: 'Settings',
 
     store: {
-        type: 'dashboard'
+        type: 'users'
     },
 
     columns: [

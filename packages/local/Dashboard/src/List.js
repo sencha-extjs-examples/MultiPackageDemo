@@ -1,15 +1,11 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('App.view.main.UsersList', {
+Ext.define('Demo.dashboard.List', {
     extend: 'Ext.grid.Grid',
-    xtype: 'userslist',
+    xtype: 'dashboardlist',
 
-    requires: [
-        'App.store.Users'
-    ],
-
-    title: 'Users',
+    title: 'Dashboard',
 
     store: {
         type: 'users'
