@@ -1,8 +1,6 @@
 /**
  * This class is the controller for the main view for the application. It is specified as
  * the "controller" of the Main view class.
- *
- * TODO - Replace this content of this view to suite the needs of your application.
  */
 Ext.define('Demo.view.main.MainController', {
     extend: 'Ext.app.ViewController',
@@ -13,54 +11,60 @@ Ext.define('Demo.view.main.MainController', {
     ],
 
     routes: {
-        'type/:type': {
+        ':type': {
             before: 'loadPackage',
             action: 'showView'
         }
     },
 
+    /**
+     * This method is called before we take action on a route change. Before we can
+     * create the proper view, we need to be sure the package that provides it is
+     * loaded.
+     */
     loadPackage: function (type, action) {
-        if (type === 'Home' || Ext.Package.isLoaded(type)) {
-            action.resume();
-        } else {
-            var tabpanel = this.getView();
+        var tabpanel = this.getView(),
+            tab = this.lookup(type),
+            pkg = tab.package;
 
+        if (!pkg || Ext.Package.isLoaded(pkg)) {
+            action.resume();
+        }
+        else {
             tabpanel.setMasked({
                 message: 'Loading Package...'
             });
 
-            Ext.Package.load(type).then(function () {
-                tabpanel.setMasked(null);
+            // Ext.defer(function () {  // so we can see the loading mask...
+                Ext.Package.load(pkg).then(function () {
+                    tabpanel.setMasked(null);
 
-                action.resume();
+                    action.resume();
+                });
+            // }, 2000);
+        }
+    },
+
+    /**
+     * This method is called to take action on a route change. We create the associated
+     * view and rely on our "before" handler (loadPackage) to ensure we can do so.
+     */
+    showView: function (type) {
+        var tabpanel = this.getView(),
+            tab = this.lookup(type);
+
+        tabpanel.setActiveItem(tab);
+
+        if (!tab.hasItem) {
+            tab.hasItem = true;
+
+            tab.add({
+                xtype: tab.view
             });
         }
     },
 
-    showView: function (type) {
-        var tabpanel = this.getView(),
-            tab = tabpanel.child('[title=' + type + ']');
-
-        tabpanel.setActiveItem(tab);
-
-        if (type !== 'Home') {
-            if (!tab.hasItem) {
-                tab.hasItem = true;
-
-                tab.add({
-                    xtype: this.packageViews[type]
-                });
-            }
-        }
-    },
-
     onItemActivate: function(tabpanel, tab) {
-        this.redirectTo('type/' + tab.title);
-    },
-
-    packageViews: {
-        Users: 'userslist',
-        Dashboard: 'dashboardlist',
-        Settings: 'settingslist'
+        this.redirectTo(tab.reference);
     }
 });

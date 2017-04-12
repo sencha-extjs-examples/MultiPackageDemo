@@ -1,12 +1,12 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('Demo.settings.List', {
+Ext.define('Demo.dashboard.Main', {
     extend: 'Ext.grid.Grid',
-    xtype: 'settingslist',
-    controller: 'settingslist',
+    xtype: 'dashboardmain',
+    controller: 'dashboardmain',
 
-    title: 'Settings',
+    title: 'Dashboard',
 
     store: {
         type: 'users'

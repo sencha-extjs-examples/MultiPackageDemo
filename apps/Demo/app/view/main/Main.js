@@ -1,9 +1,4 @@
 /**
- * This class is the main view for the application. It is specified in app.js as the
- * "mainView" property. That setting causes an instance of this class to be created and
- * added to the Viewport container.
- *
- * TODO - Replace the content of this view to suit the needs of your application.
  */
 Ext.define('Demo.view.main.Main', {
     extend: 'Ext.tab.Panel',
@@ -12,6 +7,7 @@ Ext.define('Demo.view.main.Main', {
     viewModel: 'main',
 
     requires: [
+        'Ext.layout.Fit',
         'Ext.MessageBox'
     ],
 
@@ -25,28 +21,32 @@ Ext.define('Demo.view.main.Main', {
     },
 
     items: [{
-            title: 'Home',
-            iconCls: 'x-fa fa-home',
-            items: [{
-                xtype: 'homelist'
-            }]
-        }, {
-            title: 'Users',
-            iconCls: 'x-fa fa-user',
-            package: 'Users',
-            view: 'userlist'
-        }, {
-            title: 'Dashboard',
-            iconCls: 'x-fa fa-users',
-            package: 'Dashboard',
-            view: 'dashboardlist'
-        }, {
-            title: 'Settings',
-            iconCls: 'x-fa fa-cog',
-            package: 'Settings',
-            view: 'settingslist'
-        }
-    ],
+        title: 'Home',
+        iconCls: 'x-fa fa-home',
+        reference: 'home',
+        hasItem: true,
+        items: [{
+            xtype: 'homelist'
+        }]
+    }, {
+        title: 'Users',
+        iconCls: 'x-fa fa-user',
+        reference: 'users',
+        package: 'Users',
+        view: 'usersmain'
+    }, {
+        title: 'Dashboard',
+        iconCls: 'x-fa fa-users',
+        reference: 'dashboard',
+        package: 'Dashboard',
+        view: 'dashboardmain'
+    }, {
+        title: 'Settings',
+        iconCls: 'x-fa fa-cog',
+        reference: 'settings',
+        package: 'Settings',
+        view: 'settingsmain'
+    }],
 
     listeners: {
         activeitemchange: 'onItemActivate'

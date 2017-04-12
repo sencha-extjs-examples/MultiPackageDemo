@@ -4,10 +4,10 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
-Ext.define('Demo.users.ListController', {
+Ext.define('Demo.users.MainController', {
     extend: 'Ext.app.ViewController',
 
-    alias: 'controller.userslist',
+    alias: 'controller.usersmain',
 
     onItemSelected: function (sender, record) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
