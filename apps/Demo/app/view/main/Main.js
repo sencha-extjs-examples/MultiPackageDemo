@@ -15,6 +15,8 @@ Ext.define('Demo.view.main.Main', {
         'Ext.MessageBox'
     ],
 
+    tabBarPosition: 'bottom',
+
     defaults: {
         layout: 'fit',
         tab: {

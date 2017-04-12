@@ -48,15 +48,19 @@ Ext.define('Demo.view.main.MainController', {
                 tab.hasItem = true;
 
                 tab.add({
-                    xclass: 'App.view.main.' + type + 'List'
+                    xtype: this.packageViews[type]
                 });
             }
         }
     },
 
     onItemActivate: function(tabpanel, tab) {
-        var pkgName = tab.title;
+        this.redirectTo('type/' + tab.title);
+    },
 
-        this.redirectTo('type/' + pkgName);
+    packageViews: {
+        Users: 'userslist',
+        Dashboard: 'dashboardlist',
+        Settings: 'settingslist'
     }
 });

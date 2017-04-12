@@ -3,14 +3,14 @@
      *  An array of the paths to all the applications present in this workspace
      */
     "apps": [
-        "app/App"
+        "apps/Demo"
     ],
 
     "frameworks": {
         "ext": {
             "path":"ext",
-            "package":"ext@6.2.2.195",
-            "version":"6.2.2.195"
+            "package":"ext@6.5.0",
+            "version":"6.5.0"
         }
     },
 
