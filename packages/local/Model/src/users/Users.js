@@ -3,17 +3,39 @@ Ext.define('Demo.model.users.Store', {
     alias: 'store.users',
 
     data: [
-        { name: 'Jean Luc', email: 'jeanluc.picard@enterprise.com', phone: '555-111-1111' },
-        { name: 'Worf',     email: 'worf.moghsson@enterprise.com',  phone: '555-222-2222' },
-        { name: 'Deanna',   email: 'deanna.troi@enterprise.com',    phone: '555-333-3333' },
-        { name: 'Data',     email: 'mr.data@enterprise.com',        phone: '555-444-4444' }
-    ]
+        {
+            name: 'Jessica Warren',
+            email: 'jessica.warren@acme.ccm',
+            phone: '555-111-1111',
+            avatar: 'jessica-warren.png'
+        },
 
-    // proxy: {
-    //     type: 'memory',
-    //     reader: {
-    //         type: 'json',
-    //         rootProperty: 'items'
-    //     }
-    // }
+        {
+            name: 'Donald Brown',
+            email: 'donald.brown@acme.com',
+            phone: '555-222-2222',
+            avatar: 'donald-brown.png'
+        },
+
+        {
+            name: 'Lucy Moon',
+            email: 'lucy.moon@acme.com',
+            phone: '555-333-3333',
+            avatar: 'lucy-moon.png'
+        },
+
+        {
+            name: 'Jim Sanchez',
+            email: 'jim.sanchez@acme.com',
+            phone: '555-444-4444',
+            avatar: 'jim-sanchez.png'
+        },
+
+        {
+            name: 'Marion Williams',
+            email: 'marion.williams@acme.com',
+            phone: '555-454-3241',
+            avatar: 'marion-williams.png'
+        }
+    ]
 });

@@ -6,7 +6,7 @@
 
     "framework": "ext",
     "toolkit": "modern",
-    "theme": "theme-material",
+    "theme": "DemoTheme",
     
     "requires": [
         "font-awesome",
