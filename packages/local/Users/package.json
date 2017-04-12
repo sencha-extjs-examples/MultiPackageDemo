@@ -23,22 +23,6 @@
     
         "overrides": [
             "${package.dir}/overrides"
-        ],
-    
-        "sass" : {
-            "namespace": "Demo.users",
-
-            "etc": [
-                "${package.dir}/sass/etc/all.scss"
-             ],
-    
-            "var": [
-                "${package.dir}/sass/var"
-            ],
-    
-            "src": [
-                "${package.dir}/sass/src"
-            ]
-        }
+        ]
     }
 }

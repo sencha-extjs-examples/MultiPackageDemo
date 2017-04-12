@@ -34,28 +34,6 @@
         }
     },
 
-    "sass": {
-        "namespace": "Demo",
-
-        "generated": {
-            "var": "sass/save.scss",
-            "src": "sass/save"
-        },
-
-        "etc": [
-            "sass/etc/all.scss"
-        ],
-
-        "var": [
-            "sass/var/all.scss",
-            "sass/var"
-        ],
-
-        "src": [
-            "sass/src"
-        ]
-    },
-
     "js": [
         // Commenting this entry out loads the framework files individually in dev mode.
         // {

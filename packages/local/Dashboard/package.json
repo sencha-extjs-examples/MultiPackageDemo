@@ -17,20 +17,7 @@
         "slicer": null,
 
         "output": "${package.dir}/build",
-    
-        "sass" : {
-            "namespace": "Demo.dashboard",
-            "etc": [
-                "${package.dir}/sass/etc/all.scss"
-             ],
-            "var": [
-                "${package.dir}/sass/var"
-            ],
-            "src": [
-                "${package.dir}/sass/src"
-            ]
-        },
-    
+
         "classpath": [
             "${package.dir}/src"
         ],

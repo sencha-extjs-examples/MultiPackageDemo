@@ -15,10 +15,14 @@ Ext.define('Demo.users.Main', {
     columns: [{
         text: 'Name',
         flex: 1,
-        tpl: '<div class="demo-users-avatar"></div>{name}',
         cell: {
             encodeHtml: false
-        }
+        },
+
+        tpl:
+            '<img class="demo-users-avatar" src="{avatar:resource("<@Users>/avatars/")}">' +
+            '<div class="demo-user-bio">{name}</div>'
+
     }, {
         text: 'Email',
         dataIndex: 'email',

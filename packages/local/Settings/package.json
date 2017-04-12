@@ -24,22 +24,6 @@
     
         "overrides": [
             "${package.dir}/overrides"
-        ],
-    
-        "sass" : {
-            "namespace": "Demo.settings",
-
-            "etc": [
-                "${package.dir}/sass/etc/all.scss"
-             ],
-    
-            "var": [
-                "${package.dir}/sass/var"
-            ],
-    
-            "src": [
-                "${package.dir}/sass/src"
-            ]
-        }
+        ]
     }
 }
