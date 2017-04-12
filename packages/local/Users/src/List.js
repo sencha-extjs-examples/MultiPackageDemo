@@ -4,6 +4,7 @@
 Ext.define('Demo.users.List', {
     extend: 'Ext.grid.Grid',
     xtype: 'userslist',
+    controller: 'userslist',
 
     title: 'Users',
 

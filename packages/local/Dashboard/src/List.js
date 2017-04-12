@@ -4,6 +4,7 @@
 Ext.define('Demo.dashboard.List', {
     extend: 'Ext.grid.Grid',
     xtype: 'dashboardlist',
+    controller: 'dashboardlist',
 
     title: 'Dashboard',
 

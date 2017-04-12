@@ -4,6 +4,7 @@
 Ext.define('Demo.settings.List', {
     extend: 'Ext.grid.Grid',
     xtype: 'settingslist',
+    controller: 'settingslist',
 
     title: 'Settings',
 
