@@ -21,7 +21,7 @@ Ext.define('Demo.users.Main', {
         },
 
         tpl:
-            '<img class="demo-users-avatar" src="{avatar:resource("<@Users>/avatars/")}">' +
+            '<img class="demo-users-avatar" src="{avatar:resource("<@Users>avatars/")}">' +
             // The name field could be malicious so encode it
             '<div class="demo-user-bio">{name:htmlEncode}</div>'
 

@@ -1,8 +1,9 @@
-/build
-/.sencha
 /.idea
+/build
 /ext
 /packages/remote
+
+.sencha
 bootstrap.*
 classic.json*
 modern.json*
