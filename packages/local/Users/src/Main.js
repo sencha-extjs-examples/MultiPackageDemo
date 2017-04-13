@@ -15,13 +15,15 @@ Ext.define('Demo.users.Main', {
     columns: [{
         text: 'Name',
         flex: 1,
+
         cell: {
-            encodeHtml: false
+            encodeHtml: false  // our tpl produced HTML (carefully)
         },
 
         tpl:
             '<img class="demo-users-avatar" src="{avatar:resource("<@Users>/avatars/")}">' +
-            '<div class="demo-user-bio">{name}</div>'
+            // The name field could be malicious so encode it
+            '<div class="demo-user-bio">{name:htmlEncode}</div>'
 
     }, {
         text: 'Email',
