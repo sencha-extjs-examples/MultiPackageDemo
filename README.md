@@ -1,7 +1,9 @@
 # MultiPackageDemo
 
-This example demonstrates how to build an application that consists of independently
-built, dynamically loaded packages.
+This example demonstrates how to use
+[Sencha Cmd 6.5+](https://www.sencha.com/products/sencha-cmd) and
+[Ext JS 6.5+](https://www.sencha.com/products/extjs) to create an application that
+consists of independently built, dynamically loaded packages.
 
 This mock application uses packages in real-world ways to show how to use the same
 techniques in your applications.
@@ -56,20 +58,21 @@ versus production builds.
 ## Alerts
 
 This package is in the `requires` of the `Dashboard` and `Settings` packages but is
-unknown directly by the `Demo` application. This situation will be common in large scale
-development situations where the application core is quite small.
+unknown directly by the `Demo` application. This situation is common to large scale
+projects where the application core is quite small.
 
 The important thing to understand about this arrangement is that `Ext.Package.load()` is
 a "transitive" process. In other words, when the application loads `Dashboard` as shown
-below, more steps are taken internally to satisfy these dependencies.
+below, more steps are taken internally to satisfy its dependencies.
 
+    // This is the package the app wants to use:
     Ext.Package.load('Dashboard').then(function () {
         // ...
     });
 
 When the above is called, the `load()` method will effectively do the following:
 
-    Ext.Package.load('Alerts').then(function () {
+    return Ext.Package.load('Alerts').then(function () {
         return Ext.Package.load('Dashboard');
     });
 
