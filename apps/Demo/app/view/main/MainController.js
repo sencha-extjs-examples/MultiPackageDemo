@@ -35,13 +35,13 @@ Ext.define('Demo.view.main.MainController', {
                 message: 'Loading Package...'
             });
 
-            // Ext.defer(function () {  // so we can see the loading mask...
+            Ext.defer(function () {  // so we can see the loading mask...
                 Ext.Package.load(pkg).then(function () {
                     tabpanel.setMasked(null);
 
                     action.resume();
                 });
-            // }, 2000);
+            }, 500);
         }
     },
 
