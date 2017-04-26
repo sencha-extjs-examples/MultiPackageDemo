@@ -11,7 +11,8 @@
         "compatVersion": "1.0.0",
         "format": "1",
         "local": true,
-
+        
+        "sass" : null,
         "slicer": null,
 
         "output": "${package.dir}/build",
@@ -22,22 +23,6 @@
 
         "overrides": [
             "${package.dir}/overrides"
-        ],
-
-        "sass" : {
-            "namespace": "Demo.alerts",
-
-            "etc": [
-                "${package.dir}/sass/etc/all.scss"
-             ],
-
-            "var": [
-                "${package.dir}/sass/var"
-            ],
-
-            "src": [
-                "${package.dir}/sass/src"
-            ]
-        }
+        ]
     }
 }
