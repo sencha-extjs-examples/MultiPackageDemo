@@ -78,3 +78,40 @@ When the above is called, the `load()` method will effectively do the following:
 
 That is, the `Alerts` package dependency will be handled prior to loading the `Dashboard`
 package. The application does not need to manage this situation.
+
+
+## Build
+
+Used packages are built as stand-alone bundles that are dynamically loaded at runtime.  To
+build the set of all used packages during an application build, use the `-uses` argument
+to app build.
+
+    sencha app build -uses ...
+
+Builds of used packages are placedinto sub directories of the main application build 
+directory. Consequently, builds of different build environments should be 'initialized' 
+with the set of used packages that are not under active development.
+
+    sencha app build -dev -uses ...
+
+That will run a development build sweep of all used packages and initialize the development
+build directory with the set of used package buidls.  This will typically only need to 
+happen once for packags that are not under active development
+
+The build environment (production, testing, development) of the used packages defaults
+to the build environment used to build the main application, but may be controlled 
+independently by using the `-pkgtesting`,`-pkgproduction` or `-pkgdevelopment` arguments
+
+    sencha app build -pkgtesting -dev
+    
+For packages that are under active development, rebuilds will be needed to pick up changes
+/ additions / deletions to the package contents.  To rebuild specific packages, use the 
+`-packages` argument to app build to list the set of packages to be rebuilt.
+
+    sencha app build -packages Alerts,Users,...
+     
+To load a specific package or set of packages in application dev mode for inclusion by 
+app watch, use the `-packages` argument to app watch to specify the set of packages to 
+include in the watch process.
+    
+    sencha app watch -packages Alerts
