@@ -11,7 +11,7 @@
         "compatVersion": "1.0.0",
         "format": "1",
         "local": true,
-    
+        "sass": null,
         "slicer": null,
 
         "output": "${package.dir}/build",
