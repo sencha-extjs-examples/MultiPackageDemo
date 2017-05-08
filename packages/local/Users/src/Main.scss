@@ -1,0 +1,21 @@
+.demo-users-cell .x-body-el {
+    color: material-color('deep-orange', '500');
+    font-weight: 700;
+}
+
+$demo-user-avatar-height: 40px;
+$demo-user-avatar-width: $demo-user-avatar-height;
+
+.demo-user-bio {
+    line-height: $demo-user-avatar-height;
+    margin-left: $demo-user-avatar-width + 10px;
+    vertical-align: middle;
+}
+
+.demo-users-avatar {
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    height: $demo-user-avatar-height;
+    width: $demo-user-avatar-width;
+    float: left;
+}
