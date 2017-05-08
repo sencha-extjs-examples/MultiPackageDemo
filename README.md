@@ -88,7 +88,7 @@ to app build.
 
     sencha app build -uses ...
 
-Builds of used packages are placedinto sub directories of the main application build 
+Builds of used packages are placed into sub-directories of the main application build 
 directory. Consequently, builds of different build environments should be 'initialized' 
 with the set of used packages that are not under active development.
 
@@ -96,7 +96,7 @@ with the set of used packages that are not under active development.
 
 That will run a development build sweep of all used packages and initialize the development
 build directory with the set of used package buidls.  This will typically only need to 
-happen once for packags that are not under active development
+happen once for packages that are not under active development
 
 The build environment (production, testing, development) of the used packages defaults
 to the build environment used to build the main application, but may be controlled 
