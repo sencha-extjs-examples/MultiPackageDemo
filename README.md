@@ -20,8 +20,9 @@ To get started, you'll need to follow these steps:
 - Download [Sencha Ext JS](https://www.sencha.com/products/extjs). We
   recommend extracting Ext JS into a `"sencha-sdks"` folder in your home directory.
 - Setup the framework for the application
-
+```
     $ sencha workspace install ~/sencha-sdks
+```
 
 ## Model
 
