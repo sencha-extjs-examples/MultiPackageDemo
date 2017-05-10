@@ -1,0 +1,135 @@
+{
+    "name": "Demo",
+    "version": "1.0.0.0",
+
+    "indexHtmlPath": "index.html",
+
+    "framework": "ext",
+    "toolkit": "modern",
+    "theme": "DemoTheme",
+    
+    "requires": [
+        "font-awesome",
+        "Model",
+        "package-loader"
+    ],
+
+    "uses": [
+        "Dashboard",
+        "Users",
+        "Settings"
+    ],
+
+    "classpath": [
+        "app"
+    ],
+
+    "overrides": [
+        "overrides"
+    ],
+    
+    "fashion": {
+        "inliner": {
+            "enable": false
+        }
+    },
+
+    "js": [
+        // Commenting this entry out loads the framework files individually in dev mode.
+        // {
+        //     "path": "${framework.dir}/build/ext-modern-all-debug.js"
+        // },
+        {
+            "path": "app.js",
+            "bundle": true
+        }
+    ],
+
+    "css": [
+        {
+            "path": "${build.out.css.path}",
+            "bundle": true,
+            "exclude": ["fashion"]
+        }
+    ],
+
+     "loader": {
+         "cache": false,
+         "cacheParam": "_dc"
+     },
+
+    "production": {
+        "output": {
+            "appCache": {
+                "enable": true,
+                "path": "cache.appcache"
+            }
+        },
+        "loader": {
+            "cache": "${build.timestamp}"
+        },
+        "cache": {
+            "enable": true
+        },
+        "compressor": {
+            "type": "cmd"
+        }
+    },
+    
+    "testing": {
+    },
+    
+    "development": {
+        "watch": {
+            "delay": 250
+        }
+    },
+
+    "bootstrap": {
+        "base": "${app.dir}",
+        
+        "microloader": "bootstrap.js",
+        "css": "bootstrap.css"
+    },
+
+    "output": {
+        "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+        "appCache": {
+            "enable": false
+        }
+    },
+    
+    "cache": {
+        "enable": false,
+        "deltas": true
+    },
+
+    "appCache": {
+        "cache": [
+            "index.html"
+        ],
+
+        "network": [
+            "*"
+        ],
+
+        "fallback": []
+    },
+
+    "resources": [
+        {
+            "path": "resources",
+            "output": "shared"
+        }
+    ],
+
+    "archivePath": "archive",
+
+    "slicer": null,
+
+    "ignore": [
+        "(^|/)CVS(/?$|/.*?$)"
+    ],
+
+    "id": "9e71bb6e-3961-4480-8d89-a3e3f3ecca59"
+}
