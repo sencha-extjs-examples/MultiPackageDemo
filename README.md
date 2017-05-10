@@ -16,13 +16,12 @@ Following is a diagram of this application and its packages:
 
 To get started, you'll need to follow these steps:
 
-- Install [Sencha Cmd](https://www.sencha.com/products/extjs/cmd-download/) (^6.5.0)
-- Download [Sencha Ext JS](https://www.sencha.com/products/extjs) (^6.5.0).  We
+- Install [Sencha Cmd](https://www.sencha.com/products/sencha-cmd)
+- Download [Sencha Ext JS](https://www.sencha.com/products/extjs). We
   recommend extracting Ext JS into a `"sencha-sdks"` folder in your home directory.
 - Setup the framework for the application
-    $ cd client
-    $ sencha workspace install ~/sencha-sdks
 
+    $ sencha workspace install ~/sencha-sdks
 
 ## Model
 
