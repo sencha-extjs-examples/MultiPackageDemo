@@ -24,6 +24,8 @@ To get started, you'll need to follow these steps:
     $ sencha workspace install ~/sencha-sdks
 ```
 
+On Windows the "~" part of the path will be replaced by something like "C:\Users\Me\".
+
 ## Model
 
 This package contains the data model of the application. In a traditional application
