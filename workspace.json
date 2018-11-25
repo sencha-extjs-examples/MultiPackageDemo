@@ -3,12 +3,12 @@
         "apps/Demo"
     ],
 
-    "frameworks": {
-        "ext": {
+    "frameworks": {        "ext": {
             "path":"ext",
-            "package":"ext@6.5.0",
-            "version":"6.5.0"
+            "version":"6.6.0.258"
         }
+
+        
     },
 
     "build": {
