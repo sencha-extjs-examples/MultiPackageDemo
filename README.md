@@ -23,6 +23,10 @@ To get started, you'll need to follow these steps:
 ```
     $ sencha workspace install ~/sencha-sdks
 ```
+- Alternatively, you can specify the framework directly with:
+```
+    $ sencha workspace install --framework=/absolute/path/to/framework
+```
 
 On Windows the "~" part of the path will be replaced by something like "C:\Users\Me\".
 
